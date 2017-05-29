@@ -85,11 +85,12 @@
       <V45Assemblies Include="MySql.Web\src\bin\Release\net452\MySql.Web.dll"/>
       <V45Assemblies Include="EntityFramework6\src\bin\Release\net452\MySql.Data.Entity.EF6.dll"/>
       <V45Assemblies Include="EntityFrameworkCore\src\MySql.Data.EntityFrameworkCore\bin\Release\net452\MySQL.Data.EntityFrameworkCore.dll"/>      
-	    <V45Assemblies Include="EntityFrameworkCore\src\MySql.Data.EntityFrameworkCore.Design\bin\Release\net452\MySQL.Data.EntityFrameworkCore.Design.dll"/>      
+	  <V45Assemblies Include="EntityFrameworkCore\src\MySql.Data.EntityFrameworkCore.Design\bin\Release\net452\MySQL.Data.EntityFrameworkCore.Design.dll"/>      
       <V45Assemblies Include="MySql.Data\src\bin\Release\net452\MySql.Data.xml"/>
       <V45Assemblies Include="MySql.Web\src\bin\Release\net452\MySql.Web.xml"/>
       <V45Assemblies Include="EntityFramework6\src\bin\Release\net452\MySql.Data.Entity.EF6.xml"/>
-      <V45Assemblies Include="EntityFrameworkCore\src\MySql.Data.EntityFrameworkCore\bin\Release\net452\MySQL.Data.EntityFrameworkCore.xml"/>           
+      <V45Assemblies Include="EntityFrameworkCore\src\MySql.Data.EntityFrameworkCore\bin\Release\net452\MySQL.Data.EntityFrameworkCore.xml"/>
+	  <V45Assemblies Include="MySql.Data\src\bin\Release\net452\Google.Protobuf.dll"/>
     </ItemGroup>
 
     <ItemGroup>
