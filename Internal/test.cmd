@@ -4,6 +4,7 @@ IF NOT "%1" == ""  SET MYSQL_PORT=%1
 REM =================== Test MySql.Data ==================================================
 cd MySql.Data\tests\MySql.Data.Tests
 dotnet clean
+dotnet clean
 dotnet restore 
 copy certificates\*.* %MYSQL_DATADIR%\
 dotnet build MySql.Data.Tests.csproj -c Debug
@@ -17,11 +18,11 @@ REM =================== Test MySqlX.Data =======================================
 cd MySql.Data\tests\MySqlX.Data.Tests
 dotnet clean
 dotnet restore 
-dotnet build MySql.Data.Tests.csproj -c Debug
+dotnet build MySqlX.Data.Tests.csproj -c Debug
 sn.exe -Rca  bin\debug\net452\MySql.Data.dll ConnectorNet
-sn.exe -Rca  bin\debug\net452\MySql.Data.Tests.dll ConnectorNet
-dotnet xunit -framework net452 -parallel none -xml mysql-data-test-results.xml
-dotnet xunit -framework netcoreapp1.1 -parallel none -xml mysql-data-core-test-results.xml
+sn.exe -Rca  bin\debug\net452\MySqlX.Data.Tests.dll ConnectorNet
+dotnet xunit -framework net452 -parallel none -xml mysqlx-data-test-results.xml
+dotnet xunit -framework netcoreapp1.1 -parallel none -xml mysqlx-data-core-test-results.xml
 cd ../../..
 
 REM =================== Test MySql.Web ==================================================
