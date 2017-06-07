@@ -41,8 +41,8 @@ REM sn.exe -Rca  MySql.Web\src\bin\release\net452\MySql.Web.dll ConnectorNet
 REM sn.exe -Rca  EMTrace\src\bin\Release\net452\MySql.MonitorPlugin.dll ConnectorNet
 
 REM ================== Sign netstandard assemblies ============================
-REM sn.exe -Rca  MySql.Data\src\bin\release\netstandard1.3\MySql.Data.dll ConnectorNet
-REM sn.exe -Rca  EntityFrameworkCore\src\MySql.Data.EntityFrameworkCore\bin\release\netstandard1.3\MySql.Data.EntityFrameworkCore.dll ConnectorNet
+REM sn.exe -Rca  MySql.Data\src\bin\release\netstandard1.6\MySql.Data.dll ConnectorNet
+REM sn.exe -Rca  EntityFrameworkCore\src\MySql.Data.EntityFrameworkCore\bin\release\netstandard1.6\MySql.Data.EntityFrameworkCore.dll ConnectorNet
 
 
 
