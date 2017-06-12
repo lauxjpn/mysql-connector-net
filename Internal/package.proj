@@ -11,6 +11,7 @@
     <ProductConfig>Release</ProductConfig>
     <OutputName>MySql.Data</OutputName>
     <OutputType>Package</OutputType>
+	<Suffix>dmr</Suffix>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Commercial' ">
@@ -31,8 +32,8 @@
     <GetVersion Assembly="MySql.Data/src/bin/Release/net452/mysql.data.dll" Format="{0}.{1}.{2}">
       <Output TaskParameter = "AsString" PropertyName="Version"/>
     </GetVersion>
-    <Copy SourceFiles="Installer/MSI/bin/$(Configuration)/mysql.data.msi"
-          DestinationFiles="bin/$(Configuration)/mysql-connector-net$(Postfix)-$(Version).msi"/>
+	<Copy SourceFiles="Installer/MSI/bin/$(Configuration)/mysql.data.msi"
+          DestinationFiles="bin/$(Configuration)/mysql-connector-net$(Postfix)-$(Version)-$(Suffix).msi"/>
   </Target>
 
   <ItemGroup>
@@ -73,7 +74,7 @@
     <ItemGroup>
       <FilesToZip Include="$(MSBuildProjectDirectory)\tmp\**"/>
     </ItemGroup>
-    <Zip ZipFileName="bin/$(Configuration)/mysql-connector-net$(Postfix)-$(Version)-src.zip"
+    <Zip ZipFileName="bin/$(Configuration)/mysql-connector-net$(Postfix)-$(Version)-$(Suffix)-src.zip"
          Files="@(FilesToZip)" WorkingDirectory="$(MSBuildProjectDirectory)\tmp"/>
 
     <!--    <RemoveDir Directories="tmp"/>-->
@@ -127,7 +128,7 @@
     <ItemGroup>
       <ZipFiles Include="$(MSBuildProjectDirectory)\tmp\**" />
     </ItemGroup>
-    <Zip ZipFileName="bin/$(Configuration)/mysql-connector-net$(Postfix)-$(Version)-noinstall.zip"
+    <Zip ZipFileName="bin/$(Configuration)/mysql-connector-net$(Postfix)-$(Version)-$(Suffix)-noinstall.zip"
          Files="@(ZipFiles)" workingDirectory="$(MSBuildProjectDirectory)\tmp\"/>
   </Target>
 </Project>
